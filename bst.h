@@ -1,7 +1,6 @@
-
 struct node {
   int value;
-  int *left, *right;
+  struct node *left, *right;
 };
 
 /**
@@ -85,3 +84,17 @@ struct node *bst_max(struct node *root);
  * @return Pointer to the node that holds the min value if there's children, NULL if it doesn't
  */
 struct node *bst_min(struct node *root);
+
+/**
+ * Prints tree In Order Traversal
+ *
+ * @param [root] Root/node that you want o print from
+ */
+void bst_inorder_print(struct node *root);
+
+/**
+ * Prints tree indented
+ *
+ * @param [root] Root/node that you want o print from
+ */
+void bst_indented_print(struct node *root, int level);
