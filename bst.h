@@ -25,7 +25,9 @@ void bst_destroy(struct node *root);
  * @param [root] Root of the BST
  * @param [value] Value that the new node will hold
  *
- * @return The node that holds [value], chaing by it's branch all the way to the root.
+ * @return The node that holds [value],
+ *         chaining by it's branch all the way to the
+ * root.
  */
 struct node *bst_insert(struct node *root, int value);
 
@@ -35,7 +37,8 @@ struct node *bst_insert(struct node *root, int value);
  * @param [root] Root of the BST
  * @param [value] Value to be deleted
  *
- * @return // TODO: define what it returns
+ * @return NULL when/if it found the node that holds [value],
+ *         chaining by it's branch nodes all the way to the top
  */
 struct node *bst_remove(struct node *root, int value);
 
@@ -43,7 +46,7 @@ struct node *bst_remove(struct node *root, int value);
  * Get the left child of a node
  *
  * @param [node] Parent node
- * 
+ *
  * @return Pointer to it's left subtree if exists, NULL if doesn't
  */
 struct node *bst_left(struct node *node);
@@ -52,7 +55,7 @@ struct node *bst_left(struct node *node);
  * Get the right child of a node
  *
  * @param [node] Parent node
- * 
+ *
  * @return Pointer to it's right subtree if exists, NULL if doesn't
  */
 struct node *bst_right(struct node *node);
@@ -62,7 +65,8 @@ struct node *bst_right(struct node *node);
  *
  * @param [root] Root/node that you want to search [value]
  *
- * @return Pointer to the node that holds [value] if it finds, NULL if it doesn't
+ * @return Pointer to the node that holds [value] if it finds, NULL if it
+ * doesn't
  */
 struct node *bst_find(struct node *root, int value);
 
@@ -71,17 +75,18 @@ struct node *bst_find(struct node *root, int value);
  *
  * @param [root] Root/node that you want to know the max value
  *
- * @return Pointer to the node that holds the max value if there's children, NULL if it doesn't
+ * @return Pointer to the node that holds the max value if there's children,
+ * NULL if it doesn't
  */
 struct node *bst_max(struct node *root);
-
 
 /**
  * Get the min value from the tree/sub-tree
  *
  * @param [root] Root/node that you want to know the max value
  *
- * @return Pointer to the node that holds the min value if there's children, NULL if it doesn't
+ * @return Pointer to the node that holds the min value if there's children,
+ * NULL if it doesn't
  */
 struct node *bst_min(struct node *root);
 
