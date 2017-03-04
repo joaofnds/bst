@@ -54,9 +54,11 @@ struct node *bst_remove(struct node *root, int value) {
       }
     }
   else if (value > root->value)
-    return bst_remove(root->right, value);
+    root->right =  bst_remove(root->right, value);
   else if (value < root->value)
-    return bst_remove(root->left, value);
+    root->left = bst_remove(root->left, value);
+
+  return root;
 }
 
 struct node *bst_left(struct node *node) {
